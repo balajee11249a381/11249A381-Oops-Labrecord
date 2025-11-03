@@ -1,0 +1,55 @@
+2. Member Function Inside and Outside Class
+
+Aim:
+To implement member functions inside and outside the class.
+To understand the use of scope resolution operator.
+
+Algorithm:
+
+1. Start the program.
+2. Define a class with private members.
+3. Declare one function inside and another outside the class.
+4. Define the external function using :: operator.
+5. Create an object in main().
+6. Call both functions using the object.
+7. Stop the program.
+
+Program:
+
+
+#include <iostream>
+using namespace std;
+
+class Rectangle {
+    int length, breadth;
+public:
+    void getData(int l, int b);
+    int area() { return length * breadth; }
+};
+
+void Rectangle::getData(int l, int b) {
+    length = l;
+    breadth = b;
+}
+
+int main() {
+    Rectangle rect;
+    int l, b;
+    cout << "Enter length and breadth: ";
+    cin >> l >> b;
+    rect.getData(l, b);
+    cout << "Area of Rectangle = " << rect.area() << endl;
+    return 0;
+}
+
+
+Output:
+
+
+Enter length and breadth: 6 4
+Area of Rectangle = 24
+
+
+Result:
+Member functions were successfully defined inside and outside the class.
+The use of the scope resolution operator is verified.
