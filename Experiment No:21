@@ -1,0 +1,46 @@
+21. Program to Implement Exception Handling in C++
+
+Aim:
+
+To demonstrate the use of *exception handling* using try, catch, and throw.
+
+Algorithm:
+
+1. Read two numbers.
+2. If the denominator is zero, throw an exception.
+3. Catch the exception and display an error message.
+4. Otherwise, perform division.
+
+Program:
+
+cpp
+#include <iostream>
+using namespace std;
+
+int main() {
+    int a, b;
+    cout << "Enter two numbers: ";
+    cin >> a >> b;
+
+    try {
+        if (b == 0)
+            throw b;
+        cout << "Result = " << a / b << endl;
+    } catch (int) {
+        cout << "Error: Division by zero is not allowed." << endl;
+    }
+
+    return 0;
+}
+
+
+Output:
+
+
+Enter two numbers: 10 0
+Error: Division by zero is not allowed.
+
+
+Result:
+
+Successfully demonstrated *exception handling* in C++.
