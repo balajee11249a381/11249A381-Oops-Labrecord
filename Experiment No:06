@@ -1,0 +1,51 @@
+6. Static Data Member and Function*
+
+Aim:
+To illustrate static data member and static member function.
+To show how static members share data among objects.
+
+Algorithm:
+
+1. Start the program.
+2. Define a class with a static data member.
+3. Initialize it outside the class.
+4. Increment it in the constructor.
+5. Define a static function to show count.
+6. Create multiple objects.
+7. Display total count.
+
+Program:
+
+cpp
+#include <iostream>
+using namespace std;
+
+class Counter {
+    static int count;
+public:
+    Counter() {
+        count++;
+    }
+    static void showCount() {
+        cout << "Total objects created: " << count << endl;
+    }
+};
+
+int Counter::count = 0;
+
+int main() {
+    Counter c1, c2, c3, c4;
+    Counter::showCount();
+    return 0;
+}
+
+
+Output:
+
+
+Total objects created: 4
+
+
+Result:
+Static data members retained a common value among objects.
+Static functions accessed static data successfully.
