@@ -1,0 +1,59 @@
+Passing and Returning Objects*
+
+Aim:
+To implement passing objects as arguments in a function.
+To demonstrate returning objects from a function.
+
+Algorithm:
+
+1. Start the program and define a Complex class.
+2. Declare data members for real and imaginary parts.
+3. Define functions for setting and adding data.
+4. Pass one object as argument and return another.
+5. Create and call functions in main().
+6. Display the resultant object.
+7. Stop the program.
+
+Program:
+
+#include <iostream>
+using namespace std;
+
+class Complex {
+    int real, imag;
+public:
+    void setData(int r, int i) {
+        real = r; imag = i;
+    }
+
+    Complex add(Complex c2) {
+        Complex temp;
+        temp.real = real + c2.real;
+        temp.imag = imag + c2.imag;
+        return temp;
+    }
+
+    void display() {
+        cout << real << " + " << imag << "i" << endl;
+    }
+};
+
+int main() {
+    Complex c1, c2, c3;
+    c1.setData(3, 4);
+    c2.setData(5, 7);
+    c3 = c1.add(c2);
+    cout << "Sum of complex numbers: ";
+    c3.display();
+    return 0;
+}
+
+
+Output:
+
+Sum of complex numbers: 8 + 11i
+
+
+Result:
+Objects were successfully passed and returned between functions.
+The result of addition of complex numbers was displayed.
