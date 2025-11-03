@@ -1,0 +1,56 @@
+3. Function Overloading
+
+Aim:
+To demonstrate function overloading in a class.
+To perform operations using the same function name.
+
+Algorithm:
+
+1. Start the program.
+2. Define a class containing overloaded functions.
+3. Use different parameter lists for the same function name.
+4. Create an object in main().
+5. Call the overloaded functions with different arguments.
+6. Display all the results.
+7. Stop the program.
+Program:
+
+
+#include <iostream>
+using namespace std;
+
+class Math {
+public:
+    int add(int a, int b) {
+        return a + b;
+    }
+
+    double add(double a, double b) {
+        return a + b;
+    }
+
+    int add(int a, int b, int c) {
+        return a + b + c;
+    }
+};
+
+int main() {
+    Math obj;
+    cout << "Sum of two integers: " << obj.add(5, 10) << endl;
+    cout << "Sum of two doubles: " << obj.add(4.5, 3.2) << endl;
+    cout << "Sum of three integers: " << obj.add(2, 3, 4) << endl;
+    return 0;
+}
+
+
+Output:
+
+
+Sum of two integers: 15
+Sum of two doubles: 7.7
+Sum of three integers: 9
+
+
+Result:
+Function overloading was successfully applied to class members.
+Different versions of the same function executed correctly.
