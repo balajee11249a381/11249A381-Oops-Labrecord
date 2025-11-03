@@ -1,0 +1,81 @@
+5. Constructors and Destructor*
+
+Aim:
+To demonstrate the use of constructors and destructor.
+To implement default, parameterized, and copy constructors.
+
+Algorithm:
+
+1. Start the program.
+2. Define a class with constructors and a destructor.
+3. Initialize values using constructors.
+4. Create multiple objects in main().
+5. Display their values.
+6. Observe destructor invocation at program end.
+7. Stop the program.
+
+Program:
+
+cpp
+#include <iostream>
+using namespace std;
+
+class Student {
+    string name;
+    int marks;
+public:
+    Student() {
+        name = "Default";
+        marks = 0;
+        cout << "Default Constructor called\n";
+    }
+
+    Student(string n, int m) {
+        name = n;
+        marks = m;
+        cout << "Parameterized Constructor called\n";
+    }
+
+    Student(Student &s) {
+        name = s.name;
+        marks = s.marks;
+        cout << "Copy Constructor called\n";
+    }
+
+    void display() {
+        cout << "Name: " << name << " | Marks: " << marks << endl;
+    }
+
+    ~Student() {
+        cout << "Destructor called for " << name << endl;
+    }
+};
+
+int main() {
+    Student s1;
+    Student s2("Ravi", 90);
+    Student s3(s2);
+    s1.display();
+    s2.display();
+    s3.display();
+    return 0;
+}
+
+
+Output:
+
+
+Default Constructor called
+Parameterized Constructor called
+Copy Constructor called
+Name: Default | Marks: 0
+Name: Ravi | Marks: 90
+Name: Ravi | Marks: 90
+Destructor called for Default
+Destructor called for Ravi
+Destructor called for Ravi
+
+
+Result:
+Constructors and destructor executed as expected.
+Object initialization and cleanup were demonstrated.
