@@ -1,0 +1,38 @@
+25.Web Programming with C++**
+
+(Example using CGI — Common Gateway Interface)
+
+Aim:
+
+To demonstrate *web programming using C++* with a simple CGI script.
+
+### *Algorithm:*
+
+1. Include necessary headers.
+2. Output HTTP header followed by HTML content.
+3. Compile and run in a web server supporting CGI (like Apache).
+
+Program:
+
+
+#include <iostream>
+using namespace std;
+
+int main() {
+    cout << "Content-type:text/html\n\n";
+    cout << "<html><body>";
+    cout << "<h2>Hello from C++ Web Program!</h2>";
+    cout << "</body></html>";
+    return 0;
+}
+
+
+Output:
+
+
+Hello from C++ Web Program!
+
+
+Result:
+
+Successfully displayed a simple HTML page using *C++ web programming (CGI)*.
