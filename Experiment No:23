@@ -1,0 +1,46 @@
+23. Program to Implement Signal (Interrupt) Handling in C++**
+
+Aim:
+
+To implement *signal (interrupt) handling* using the signal() function in C++.
+
+Algorithm:
+
+1. Include <csignal> and <iostream>.
+2. Define a signal handler function.
+3. Register the handler using signal(SIGINT, handler).
+4. Run an infinite loop to test the interrupt (Ctrl+C).
+
+Program:
+
+#include <iostream>
+#include <csignal>
+#include <unistd.h>
+using namespace std;
+
+void signalHandler(int signum) {
+    cout << "\nInterrupt signal (" << signum << ") received.\n";
+    exit(signum);
+}
+
+int main() {
+    signal(SIGINT, signalHandler);
+    while (1) {
+        cout << "Running... Press Ctrl+C to stop.\n";
+        sleep(2);
+    }
+    return 0;
+}
+
+
+Output:
+
+
+Running... Press Ctrl+C to stop.
+^C
+Interrupt signal (2) received.
+
+
+Result:
+
+Successfully implemented *signal handling* in C++.
