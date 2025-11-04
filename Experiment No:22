@@ -1,0 +1,42 @@
+22. Program to Implement User-Defined Namespace in C++**
+
+Aim:
+
+To implement a *user-defined namespace* in C++.
+
+Algorithm:
+
+1. Create a namespace with some variables and functions.
+2. Access them using the namespace_name:: scope operator.
+
+Program:
+
+cpp
+#include <iostream>
+using namespace std;
+
+namespace MathOps {
+    int add(int a, int b) {
+        return a + b;
+    }
+    int sub(int a, int b) {
+        return a - b;
+    }
+}
+
+int main() {
+    cout << "Addition = " << MathOps::add(10, 5) << endl;
+    cout << "Subtraction = " << MathOps::sub(10, 5) << endl;
+    return 0;
+}
+
+
+Output:
+
+
+Addition = 15
+Subtraction = 5
+
+Result:
+
+Successfully demonstrated a *user-defined namespace* in C++.
