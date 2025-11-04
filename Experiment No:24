@@ -1,0 +1,43 @@
+24. Simple Programs Using C++ STL**
+
+Aim:
+
+To demonstrate simple programs using *C++ Standard Template Library (STL)*.
+
+Algorithm:
+
+1. Include <vector> and <algorithm>.
+2. Use STL containers and algorithms to perform operations.
+
+Program:
+
+#include <iostream>
+#include <vector>
+#include <algorithm>
+using namespace std;
+
+int main() {
+    vector<int> v = {5, 2, 9, 1, 7};
+
+    sort(v.begin(), v.end());
+
+    cout << "Sorted elements: ";
+    for (int x : v)
+        cout << x << " ";
+    cout << endl;
+
+    cout << "Max element: " << *max_element(v.begin(), v.end()) << endl;
+    return 0;
+}
+
+
+Output:
+
+
+Sorted elements: 1 2 5 7 9
+Max element: 9
+
+
+Result:
+
+Successfully demonstrated *use of STL (vector and algorithm)* in C++.
