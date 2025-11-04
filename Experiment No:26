@@ -1,0 +1,39 @@
+26. Simple Programs Using Graphics Concepts in C**
+
+Aim:
+
+To demonstrate *basic graphics concepts* using C.
+
+Algorithm:
+
+1. Include <graphics.h>.
+2. Initialize graphics mode.
+3. Draw shapes like circle, line, rectangle.
+4. Close graphics.
+
+Program:
+
+c
+#include <graphics.h>
+#include <conio.h>
+
+int main() {
+    int gd = DETECT, gm;
+    initgraph(&gd, &gm, "");
+
+    circle(200, 200, 50);
+    rectangle(100, 100, 300, 300);
+    line(100, 100, 300, 300);
+
+    getch();
+    closegraph();
+    return 0;
+}
+
+Output:
+
+A graphics window displaying a *circle, rectangle, and line*.
+
+Result:
+
+Successfully demonstrated *basic graphics operations in C*
